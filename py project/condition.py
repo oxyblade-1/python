@@ -1,4 +1,3 @@
-
 #quesiton type chaine
 question = str(input("aime tu le chocolat ?"))
 
@@ -15,3 +14,7 @@ elif question == "minecraft":
 #condition finale
 else:
     print("rien ne se passe !")
+
+
+#revoir notion "not" l'utilisation des variables
+# booléenne dans les boucles
