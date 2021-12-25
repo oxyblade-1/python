@@ -10,9 +10,32 @@ b = IntVar()
 selection1 = None
 selection2 = None
 
-#dec = bitcoin
-#bin = euro
-#hex = dollard
+"""
+1euro = 0,000022bitcoin
+1euro = 1,13dollar
+1euro = 129,72yen
+1euro = 0.85livre-sterling
+
+1bitcoin = 45080euro
+1bitcoin = 51164,90dollar
+1bitcoin = 5852727,33yen
+1bitcoin = 38172,09livre-sterling
+
+1dollar = 0,000020bitcoin
+1dollar= 0,88euro
+1dollar = 114,40yen
+1dollar = 0.75livre-sterling
+
+1livre-sterling = 0,000026bitcoin
+1livre-sterling = 1,34dollar
+1livre-sterling = 129,70yen
+1livre-sterling = 0.85euro
+
+1yen = 45080bitcoin
+1yen = 1,13dollar
+1yen = 129,70euro
+1yen = 0.85livre-sterling
+"""
 
 #system de selection
 def update_selection1(operation):
@@ -29,6 +52,13 @@ def update_selection2(operation):
 def biteur(user_input):
     return user_input * 45080
 
+def doleur(user_input):
+    return user_input * 0.88
+
+def bitdol(user_input):
+    return
+
+
 #fonction de verification
 def calcul():
     user_input = e1.get()
@@ -41,8 +71,8 @@ def calcul():
     elif conversion == ('bit1','eur2') or ('eur1','bit2'):
         result['text'] = 'resultat '+ str(biteur(user_input))
 
-    elif conversion == ('bin1','dec2'):
-        result['text'] = 'resultat '+ str(bindec(user_input))
+    elif conversion == ('dol1','eur2') or ('eur1','dol2'):
+        result['text'] = 'resultat '+ str(doleur(user_input))
 
         #hexa vers decimale
 
@@ -71,17 +101,18 @@ value = numéro du boutton (si il n'y a pas le indicator alors change de forme)
 """
 #interface graphique
 Label(fen, text="Saisissez la valeur à convertir").pack(side=TOP)
-e1 = Entry(fen)
-e1.pack(side=TOP)
+e1 = Entry(fen).pack(side=TOP)
+Label(fen, text="valeur monétaire").pack(side=TOP)
+e2 = Entry(fen).pack()
 result = Label(fen, text='RESULTAT?',bg='#FAEB00',fg='#013B71')
-affichage = result.pack()
+affichage = result.pack(padx=5,pady=5)
 
 Fgauche = Frame(fen)
 Fgauche.pack(side=LEFT)
 Label(Fgauche, text="Base de départ").pack()
 bit1 = Radiobutton(Fgauche, text="₿ (BTC)", width = 15,variable=a, value=1,indicatoron=0,command=lambda: update_selection1('bit1')).pack()
 eur1= Radiobutton(Fgauche, text="€ (EUR)", width = 15,variable=a, value=2,indicatoron=0,command=lambda: update_selection1('eur1')).pack()
-dol1 = Radiobutton(Fgauche, text="$ (US)", width = 15,variable=a, value=3,indicatoron=0,command=lambda: update_selection1('dol1')).pack()
+dol1 = Radiobutton(Fgauche, text="$ (USD)", width = 15,variable=a, value=3,indicatoron=0,command=lambda: update_selection1('dol1')).pack()
 liv1 = Radiobutton(Fgauche, text="£ (GBP)", width = 15,variable=a, value=4,indicatoron=0,command=lambda: update_selection1('liv1')).pack()
 yen1 = Radiobutton(Fgauche, text="¥ (JPY)", width = 15,variable=a, value=5,indicatoron=0,command=lambda: update_selection1('yen1')).pack()
 
@@ -90,7 +121,7 @@ Fdroite.pack(side=RIGHT)
 Label(Fdroite, text="Base d'arrivee").pack()
 bit2 = Radiobutton(Fdroite, text="₿ (BTC)", width = 15,variable=b, value=6,indicatoron=0,command=lambda: update_selection2('bit2')).pack()
 eur2= Radiobutton(Fdroite, text="€ (EUR)", width = 15,variable=b, value=7,indicatoron=0,command=lambda: update_selection2('eur2')).pack()
-dol2 = Radiobutton(Fdroite, text="$ (US)", width = 15,variable=b, value=8,indicatoron=0,command=lambda: update_selection2('dol2')).pack()
+dol2 = Radiobutton(Fdroite, text="$ (USD)", width = 15,variable=b, value=8,indicatoron=0,command=lambda: update_selection2('dol2')).pack()
 liv2 = Radiobutton(Fdroite, text="£ (GBP)", width = 15,variable=b, value=9,indicatoron=0,command=lambda: update_selection2('liv2')).pack()
 yen2 = Radiobutton(Fdroite, text="¥ (JPY)", width = 15,variable=b, value=10,indicatoron=0,command=lambda: update_selection1('yen2')).pack()
 
