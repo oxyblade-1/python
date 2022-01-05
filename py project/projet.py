@@ -22,8 +22,9 @@ def update_selection2(operation):
     print(selection2)
 
 #binaire vers decimale
+
 def decbin(user_input):
-    return bin(user_input)[2:]
+    return int(bin(int(user_input))[2:])
 
 def bindec(user_input):
     return int(str(user_input),2)
@@ -38,17 +39,16 @@ def hexbin(user_input):
 #hexadecimale vers decimale
 def hexdec(user_input):
     return int(str(user_input),16)
-
+    
 def dechex(user_input):
-    return hex(user_input)[2:]
-
+    return str(hex(int(user_input)))[2:]
 
 #fonction de verification
 def calcul():
     user_input = e1.get()
     conversion = (selection1, selection2)
     if selection1[0:-1] == selection2[0:-1]:
-        result['text'] = 'resultat '+ str(user_input)
+        result['text'] = f'resultat {user_input}'
 
         #binaire vers decimale
 
@@ -61,7 +61,7 @@ def calcul():
         #hexa vers decimale
 
     elif conversion == ('dec1','hex2'):
-        result['text'] = 'resultat '+ str(dechex(user_input))
+        result['text'] = f'resultat {dechex(user_input)}'
 
     elif conversion == ('hex1','dec2'):
         result['text'] = 'resultat '+ str(hexdec(user_input))
