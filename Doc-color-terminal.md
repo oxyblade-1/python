@@ -6,7 +6,7 @@ blink      :    \033[5m
 reverse    :    \033[7m
 concealed"  :    \033[8m
 
-bold: \033[1m `#f03c15`
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
 
 # couleur texte
 
