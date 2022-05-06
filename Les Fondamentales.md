@@ -2,11 +2,19 @@
 
 > Introduction
 
-Python est un langage de programmation interprété,
+Python est un langage de programmation interprété ,
 multi-paradigme et multiplateformes.
 Il favorise la programmation impérative structurée, fonctionnelle et orientée objet.
 Il comporte donc une sytaxe simple, et peut donc facilement aider les débutant à faire des programmes
-qui à l'avenir deviendrons très utiles.
+qui à l'avenir deviendrons très utiles. Globalement, voici les popur et contre du language:
+
+**Défauts**
+* Language Interprété donc moins performant et beaucoup plus lent en lecture
+
+**Avantages**
+* Syntaxe simple
+* Ouverture de possibilitées
+* Communautée Active
 
 > Les Prérequis
 
@@ -34,5 +42,30 @@ Exactement comme pour le vélo, personne ne se pose de question de comment fonct
 autre choses du genre juste on avance pas à pas, on tombe et puis on réessaye jusqu'à ce que sa fonctionne.
 Donc pratiquer, à chque fois que vous apprennez quelque chose.
 
+> Utilisation de python
+
+* Logicielle (affichage de donnée, analyse d'état, ...)
+* Petit Jeu (snake, MMORPG comme zelda, ...)
+* petit script de calcul (equation, moyenne, ...)
+* programme d'automatisation de tâche (lancement de logicielle lors de démarrage, interraction Os)
+
+> Les types de Valeurs
+
+* Les String, ce sont des valeur de type **chaine de caractère** qui permettent de donnée une valeur textuel à une variable
+elle doit être initialiser par des "" et sont abréger par str (que nous verrons plus tard).
+
+exemple :
+```py
+print("hello world")
+```
+
 > Les Variables
 
+une variable est un symbole représentant, un objet indéterminé. Cet objet peux alors prendre une valeur qui peut être stocker ou même réutilisée.
+En python ou même dans les autres languages.
+
+exemple:
+```py
+ma_variable = "name"
+print(ma_variable)
+```
