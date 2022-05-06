@@ -11,7 +11,10 @@
 
 > couleur texte
 
-- ![#000000](https://via.placeholder.com/15/000000/000000?text=+) black      :    ```py\033[30m``` 
+- ![#000000](https://via.placeholder.com/15/000000/000000?text=+) black :  
+```py
+\033[30m
+``` 
 - ![#FE0002](https://via.placeholder.com/15/FE0002/000000?text=+) red        :    \033[31m
 - ![#00F137](https://via.placeholder.com/15/00F137/000000?text=+) green      :    \033[32m
 - ![#EFFE00](https://via.placeholder.com/15/EFFE00/000000?text=+) yellow     :    \033[33m
